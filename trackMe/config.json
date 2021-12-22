@@ -2,14 +2,18 @@
     "FIJI" : "/home/cstansbu/Fiji.app/ImageJ-linux64",
     "SCRIPT" : "/home/cstansbu/git_repositories/imaging_paper/trackMe/track_headless.py",
     "FIJI_ARGS" : {
-        "CZI_PATH" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/3x3_example/3x3-extract-Scene6-07-14to15_stitched.czi",
+        "CZI_PATH" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/3x3_example/3x3-extract_small.czi",
         "TIFF_OUTPUT" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/3x3_example/composite.tiff",
         "BLUE_CHANNEL" : 3,
         "RED_CHANNEL" : 2,
         "GREEN_CHANNEL" : 1,
         "ESTIMATED_RADIUS" : 20,
         "MEDIAN_FILTER" : 2,
-        "CONTRAST_SATURATION" : 0.35
+        "CONTRAST_SATURATION" : 0.35,
+        "MAX_LINKING_DISTANCE" : 45,
+        "GAP_CLOSING" : 25,
+        "FRAME_GAP" : 3,
+        "SPOT_OUTPUT" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/3x3_example/spots.json"
     }
 
 }

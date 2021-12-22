@@ -1,13 +1,8 @@
 import pandas as pd
 import numpy as np
 import os
-from tqdm.notebook import tqdm
+import json
 import shutil
-from importlib import reload
-import skimage.io
-import matplotlib 
-import matplotlib.pyplot as plt 
-import matplotlib.patches as patches
 import json
 import argparse
 import subprocess
@@ -26,6 +21,7 @@ def format_fiji_args():
     
     fiji_args = ",".join(fiji_args)
     return fiji_args
+    
 
     
 
@@ -43,6 +39,6 @@ if __name__ == '__main__':
     locals().update(config)
     
     fiji_args = str(format_fiji_args())
-    bashCommand = ["xvfb-run", "-a", f"{FIJI}", "--ij2", "--console", "--run", f'{SCRIPT}', fiji_args]
+    bashCommand = ["xvfb-run", "-a", f"{FIJI}", "--ij2", "--run", f'{SCRIPT}', fiji_args]
     runner = subprocess.run(bashCommand, check=True, text=True, shell=False)
-#     print(runner)
+    print("Process complete.")

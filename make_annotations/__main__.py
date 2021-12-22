@@ -20,10 +20,13 @@ def load_config(config_path):
 
 
 def load_trackmate_file(trackmate_path):
-    """Read a single trackmate output file and perform basic is operations """
+    """Read a single trackmate output file (json) and perform basic is operations """
     base = os.path.basename(trackmate_path)
     filename, _ = os.path.splitext(base)
-    df = pd.read_csv(trackmate_path, skiprows=[1, 2, 3])
+    
+    with open(trackmate_path, "r") as read_file:
+        data = json.load(read_file)
+    df = pd.DataFrame(data)
     
     # alwasy drop NA Ids
     df = df[df['TRACK_ID'].notna()]
