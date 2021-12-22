@@ -1,0 +1,10 @@
+{
+    "TRACKMATE_PATH" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/WH18/test/control_1.csv",
+    "TIF_PATH" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/WH18/test/control_1.tif",
+    "FILTERED_OUTPUT" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/WH18/test/filtered_spots.csv",
+    "ANNOTATION_OUTPUT" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/WH18/test/data/",
+    "PIXEL_SCALING" : 0.7310,
+    "MINIMUM_TRACK_LEN" : 10,
+    "MINIMIM_AVERAGE_SIZE" : 2,
+    "SAMPLE_PROPORTION" : 1
+}

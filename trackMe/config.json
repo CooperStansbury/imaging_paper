@@ -1,0 +1,16 @@
+{
+    "FIJI" : "/home/cstansbu/Fiji.app/ImageJ-linux64",
+    "SCRIPT" : "/home/cstansbu/git_repositories/imaging_paper/trackMe/track_headless.py",
+    "FIJI_ARGS" : {
+        "CZI_PATH" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/3x3_example/3x3-extract-Scene6-07-14to15_stitched.czi",
+        "TIFF_OUTPUT" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/3x3_example/composite.tiff",
+        "BLUE_CHANNEL" : 3,
+        "RED_CHANNEL" : 2,
+        "GREEN_CHANNEL" : 1,
+        "ESTIMATED_RADIUS" : 20,
+        "MEDIAN_FILTER" : 2,
+        "CONTRAST_SATURATION" : 0.35
+    }
+
+}
+
