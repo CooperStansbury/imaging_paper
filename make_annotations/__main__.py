@@ -43,7 +43,7 @@ def load_trackmate_dir(trackmate_path):
     only contains trackmate files """
     df_list = []
     for f in os.listdir(trackmate_path):
-        if f.endswith(".csv"):
+        if f.endswith(".json"):
             f_path = f"{trackmate_path}{f}"
             tmp = load_trackmate_file(f_path)
             df_list.append(tmp)
@@ -109,12 +109,12 @@ def filter_frame(df):
 
     # filter by step length 
     filtered = df.groupby('TRACK_ID')['STEP'].max().reset_index()
-    filtered = filtered[filtered['STEP'] > MINIMUM_TRACK_LEN]
+    filtered = filtered[filtered['STEP'] > float(MINIMUM_TRACK_LEN)]
     tmp = tmp[tmp['TRACK_ID'].isin(filtered['TRACK_ID'])]
 
     # filter by size
     filtered = tmp.groupby('TRACK_ID')['RADIUS'].mean().reset_index()
-    filtered = filtered[filtered['RADIUS'] > MINIMIM_AVERAGE_SIZE]
+    filtered = filtered[filtered['RADIUS'] > float(MINIMIM_AVERAGE_SIZE)]
     tmp = tmp[tmp['TRACK_ID'].isin(filtered['TRACK_ID'])]
 
     df = tmp.copy()
@@ -159,7 +159,7 @@ def get_images(tiff, frame, xpos, ypos, xwin=50, ywin=50):
 def get_samples(df):
     """A function to sample tracks from the dataframe"""
     n = df['TRACK_ID'].nunique()
-    sample_size = int(n * SAMPLE_PROPORTION)
+    sample_size = int(n * float(SAMPLE_PROPORTION))
     tracks = np.random.choice(df['TRACK_ID'].unique(), sample_size)
     sample_tracks = df[df['TRACK_ID'].isin(tracks)]
     return sample_tracks
@@ -221,8 +221,8 @@ if __name__ == '__main__':
     
     last_track = None
     for idx, row in sample_tracks.iterrows():
-        xpos = row['POSITION_X'] * PIXEL_SCALING
-        ypos = row['POSITION_Y'] * PIXEL_SCALING
+        xpos = row['POSITION_X'] * float(PIXEL_SCALING)
+        ypos = row['POSITION_Y'] * float(PIXEL_SCALING)
 
         frame = int(row['FRAME'])
         track = row['TRACK_ID']
@@ -266,4 +266,6 @@ if __name__ == '__main__':
 
         plt.savefig(save_path,  bbox_inches='tight')
         plt.close(fig)
+        
+    print("Process complete.")
         

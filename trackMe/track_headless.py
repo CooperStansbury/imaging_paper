@@ -127,7 +127,7 @@ setup = settings.toStringImageInfo()
 # Configure StarDist default detector.
 settings.detectorFactory = StarDistDetectorFactory()
 settings.detectorSettings = {
-    'TARGET_CHANNEL' : int(BLUE_CHANNEL)
+    'TARGET_CHANNEL' : 3 #always channel 3 of the composite image
 }
 
 # Configure tracker

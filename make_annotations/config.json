@@ -1,10 +1,10 @@
 {
-    "TRACKMATE_PATH" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/WH18/test/control_1.csv",
-    "TIF_PATH" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/WH18/test/control_1.tif",
-    "FILTERED_OUTPUT" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/WH18/test/filtered_spots.csv",
-    "ANNOTATION_OUTPUT" : "/nfs/turbo/umms-indikar/shared/projects/live_cell_imaging/PIP_FUCCI_ANALYSIS/WH18/test/data/",
+    "TRACKMATE_PATH" : "/scratch/indikar_root/indikar1/cstansbu/wh18_results/control_myod_only/spots/",
+    "TIF_PATH" : "/scratch/indikar_root/indikar1/cstansbu/wh18_results/control_myod_only/tiff/",
+    "FILTERED_OUTPUT" : "/scratch/indikar_root/indikar1/cstansbu/wh18_results/control_myod_only/filtered_spots.csv",
+    "ANNOTATION_OUTPUT" : "/scratch/indikar_root/indikar1/cstansbu/wh18_results/control_myod_only/images_for_annotation/",
     "PIXEL_SCALING" : 0.7310,
-    "MINIMUM_TRACK_LEN" : 10,
-    "MINIMIM_AVERAGE_SIZE" : 2,
-    "SAMPLE_PROPORTION" : 1
+    "MINIMUM_TRACK_LEN" : 25,
+    "MINIMIM_AVERAGE_SIZE" : 5,
+    "SAMPLE_PROPORTION" : 0.2
 }
