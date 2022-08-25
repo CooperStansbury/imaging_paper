@@ -40,5 +40,8 @@ if __name__ == '__main__':
     
     fiji_args = str(format_fiji_args())
     bashCommand = ["xvfb-run", "-a", f"{FIJI}", "--ij2", "--run", f'{SCRIPT}', fiji_args]
-    runner = subprocess.run(bashCommand, check=True, text=True, shell=False)
-    print("Process complete.")
+    
+    print(bashCommand)
+    
+#     runner = subprocess.run(bashCommand, check=True, text=True, shell=False)
+#     print("Process complete.")
